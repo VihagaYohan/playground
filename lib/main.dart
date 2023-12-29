@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:playground/bottom_navigation/bottom_home.dart';
 import 'package:playground/home_screen.dart';
+import 'package:playground/layout/layout_main.dart';
 import 'package:playground/models/Todo.dart';
 import 'package:playground/navigation%20/navigation_home.dart';
 import 'package:playground/navigation%20/song_screen.dart';
@@ -51,8 +52,6 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         // routerConfig: _router,
-        home: TodoList(
-          todos: todos,
-        ));
+        home: LayoutMain());
   }
 }
