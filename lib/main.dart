@@ -5,6 +5,8 @@ import 'package:playground/layout/layout_main.dart';
 import 'package:playground/models/Todo.dart';
 import 'package:playground/navigation%20/navigation_home.dart';
 import 'package:playground/navigation%20/song_screen.dart';
+import 'package:playground/design_theme/thme_home.dart';
+import 'package:playground/design_theme/thme_home.dart';
 
 // navigation
 import 'package:go_router/go_router.dart';
@@ -48,10 +50,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+            useMaterial3: true,
+
+            // define default brightness and color
+            colorScheme: ColorScheme.fromSeed(
+                seedColor: Colors.purple, brightness: Brightness.dark),
+
+            // defind the default `TextTheme`. Use this to specify the default
+            // text styling for headlines, titles, bodies of text and more
+            textTheme: const TextTheme(
+                displayLarge:
+                    TextStyle(fontSize: 72, fontWeight: FontWeight.bold),
+                titleLarge:
+                    TextStyle(fontSize: 68, fontWeight: FontWeight.w700))),
         // routerConfig: _router,
-        home: LayoutMain());
+        home: const ThemeHome());
   }
 }
